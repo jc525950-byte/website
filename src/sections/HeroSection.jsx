@@ -1,8 +1,16 @@
 import { Button, Col, Row, Space, Statistic, Tag } from 'antd';
+import { useNavigate } from 'react-router-dom';
 import { heroHighlights } from '../content/homepage.js';
 import './HeroSection.css';
 
 export default function HeroSection() {
+  const navigate = useNavigate();
+
+  const handleViewDetail = () => {
+    navigate('/detail');
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 60);
+  };
+
   return (
     <section id="hero" className="hero section" aria-labelledby="hero-title">
       <Row gutter={[48, 48]} align="middle" justify="space-between">
@@ -17,11 +25,11 @@ export default function HeroSection() {
             马来西亚专业技术团队一站式平台包网搭建开发，提供棋牌、菠菜、直播、交易所、H5 等多类源码资源，站长亲测调试，助你项目快速上线。
           </p>
           <Space size="large" className="hero-actions">
-            <Button type="primary" size="large" href="#resources">
-              浏览最新源码
+            <Button type="primary" size="large" onClick={handleViewDetail}>
+              查看示例详情
             </Button>
-            <Button size="large" href="#contact">
-              联系客服对接
+            <Button size="large" href="#resources">
+              浏览最新源码
             </Button>
           </Space>
           <div className="hero-stats" role="list">

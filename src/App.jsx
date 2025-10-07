@@ -1,9 +1,10 @@
 import { Layout, ConfigProvider } from 'antd';
 import zhCN from 'antd/locale/zh_CN';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ResponsiveHeader from './components/ResponsiveHeader.jsx';
-import HeroSection from './sections/HeroSection.jsx';
-import ArticlesSections from './sections/ArticlesSections.jsx';
 import FooterSection from './sections/FooterSection.jsx';
+import HomePage from './pages/HomePage.jsx';
+import DetailPage from './sections/DetailPage.jsx';
 
 const { Content } = Layout;
 
@@ -18,14 +19,18 @@ const theme = {
 export default function App() {
   return (
     <ConfigProvider locale={zhCN} theme={theme}>
-      <Layout>
-        <ResponsiveHeader />
-        <Content>
-          <HeroSection />
-          <ArticlesSections />
-        </Content>
-        <FooterSection />
-      </Layout>
+      <BrowserRouter>
+        <Layout>
+          <ResponsiveHeader />
+          <Content>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/detail" element={<DetailPage />} />
+            </Routes>
+          </Content>
+          <FooterSection />
+        </Layout>
+      </BrowserRouter>
     </ConfigProvider>
   );
 }
