@@ -43,6 +43,8 @@ export const solutionList = [
     description:
       '从试用到续费的关键节点实现自动化触达，结合 AI 健康度评分预警流失风险。',
     tags: ['试用激活', '续费预测', '客户成功'],
+    price: '¥1,999/月起',
+    image: '/images/solution-saas.svg',
   },
   {
     key: 'manufacturing',
@@ -51,6 +53,8 @@ export const solutionList = [
     description:
       '整合经销商数据，实现跨区域线索同步，提升报价效率与订单透明度。',
     tags: ['渠道管理', '移动巡店', 'BI 报表'],
+    price: '¥2,899/月起',
+    image: '/images/solution-manufacturing.svg',
   },
   {
     key: 'finance',
@@ -59,6 +63,18 @@ export const solutionList = [
     description:
       '基于客户画像自动筛选理财产品，通过智能质检与通话存档满足监管要求。',
     tags: ['客户画像', '智能质检', '合规管理'],
+    price: '¥3,299/月起',
+    image: '/images/solution-finance.svg',
+  },
+  {
+    key: 'retail',
+    sector: '零售连锁',
+    title: '全渠道会员增长方案',
+    description:
+      '联动门店、APP 与小程序，实现精准优惠推送与会员生命周期价值管理。',
+    tags: ['会员运营', '全渠道触达', '库存联动'],
+    price: '¥1,499/月起',
+    image: '/images/solution-retail.svg',
   },
 ];
 
