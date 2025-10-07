@@ -2,28 +2,35 @@
   background: #fff;
 }
 
-.partners-grid {
-  max-width: 880px;
-  margin: 0 auto;
+.category-card {
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.partner-badge {
-  height: 72px;
-  border-radius: 16px;
-  border: 1px solid rgba(47, 84, 235, 0.18);
-  background: linear-gradient(180deg, rgba(47, 84, 235, 0.04), rgba(47, 84, 235, 0));
-  display: grid;
-  place-items: center;
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.5px;
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.14);
+}
+
+.category-card__title a {
   color: #1f2633;
-  text-align: center;
 }
 
-@media (max-width: 576px) {
-  .partner-badge {
-    font-size: 14px;
-    height: 64px;
-  }
+.category-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-card__hint {
+  margin-bottom: 0;
+}
+
+.category-card__hint a {
+  color: #2f54eb;
 }

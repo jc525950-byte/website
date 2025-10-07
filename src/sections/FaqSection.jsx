@@ -15,8 +15,8 @@ export default function FaqSection() {
       <SectionHeader
         id="faq-title"
         title="常见问题解答"
-        subtitle="从部署方式到客户成功服务，快速了解使用 SkySales 的关键问题。"
-        eyebrow="FAQ"
+        subtitle="基于网站提供的信息，总结常见的访问与合作问题。"
+        eyebrow="站点 FAQ"
         align="start"
       />
       <Collapse

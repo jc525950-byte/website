@@ -15,9 +15,9 @@ export default function TestimonialsSection() {
     >
       <SectionHeader
         id="testimonials-title"
-        title="倾听客户的真实声音"
-        subtitle="来自不同行业的客户正在通过 SkySales 驱动可持续增长。"
-        eyebrow="客户故事"
+        title="站点服务承诺"
+        subtitle="以下引述均来自网站公开信息，涵盖平台定位、运维团队与质量保障。"
+        eyebrow="站内摘录"
       />
       <Carousel autoplay dots className="testimonial-carousel">
         {testimonialList.map((testimonial) => (

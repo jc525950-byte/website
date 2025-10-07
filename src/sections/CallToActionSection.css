@@ -1,5 +1,5 @@
 .cta {
-  background: linear-gradient(120deg, rgba(47, 84, 235, 0.95), rgba(47, 84, 235, 0.75));
+  background: linear-gradient(120deg, rgba(255, 146, 111, 0.95), rgba(255, 120, 63, 0.85));
   color: #fff;
 }
 
@@ -18,10 +18,12 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
-.cta .ant-input {
+.cta .ant-input,
+.cta .ant-input-textarea {
   background: rgba(255, 255, 255, 0.95);
   border: none;
   border-radius: 12px;
+  color: #1f2633;
 }
 
 @media (max-width: 768px) {

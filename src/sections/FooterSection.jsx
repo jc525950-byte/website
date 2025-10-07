@@ -1,4 +1,4 @@
-import { Layout, Space, Typography } from 'antd';
+import { Layout, Typography } from 'antd';
 import './FooterSection.css';
 
 const { Footer } = Layout;
@@ -7,23 +7,18 @@ const { Text, Link } = Typography;
 export default function FooterSection() {
   return (
     <Footer className="footer" aria-label="页脚">
-      <div>
-        <Text strong className="footer-brand">
-          SkySales
-        </Text>
-        <Text className="footer-description">
-          © {new Date().getFullYear()} SkySales Technologies. 保留所有权利。
+      <div className="footer-inner footer-inner--simple">
+        <Text className="footer-copy">
+          Copyright © 2008 - 2025{' '}
+          <Link href="https://www.kvxr.com/" target="_blank" rel="noreferrer">
+            南亚源码网
+          </Link>{' '}
+          版权所有{' '}
+          <Link href="https://www.kvxr.com/sitemap.xml" target="_blank" rel="noreferrer">
+            网站地图
+          </Link>
         </Text>
       </div>
-      <Space size="large" className="footer-links" aria-label="页脚导航">
-        <Link href="#partners">合作伙伴</Link>
-        <Link href="#features">产品特性</Link>
-        <Link href="#solutions">行业方案</Link>
-        <Link href="#pricing">价格</Link>
-        <Link href="#cta">联系我们</Link>
-        <Link href="#faq">常见问题</Link>
-        <Link href="#">隐私政策</Link>
-      </Space>
     </Footer>
   );
 }

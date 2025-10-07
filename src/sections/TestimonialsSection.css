@@ -22,7 +22,7 @@
 }
 
 .testimonial-rating {
-  color: #f7b500;
+  color: #ff926f;
   display: flex;
   gap: 8px;
   font-size: 20px;
@@ -41,8 +41,8 @@
 }
 
 .testimonial-avatar {
-  background: rgba(47, 84, 235, 0.12);
-  color: #2f54eb;
+  background: rgba(255, 146, 111, 0.16);
+  color: #ff783f;
   font-size: 20px;
 }
 

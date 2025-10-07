@@ -1,48 +1,39 @@
-import { Button, Card, Col, Row, Tag, Typography } from 'antd';
+import { Button, Card, Col, Row, Typography } from 'antd';
 import SectionHeader from '../components/SectionHeader.jsx';
-import { solutionList } from '../content/homepage.js';
+import { resourceList } from '../content/homepage.js';
 import './SolutionsSection.css';
 
 const { Title, Paragraph, Text } = Typography;
 
 export default function SolutionsSection() {
   return (
-    <section id="solutions" className="solutions section" aria-labelledby="solutions-title">
+    <section id="resources" className="solutions section" aria-labelledby="solutions-title">
       <SectionHeader
         id="solutions-title"
-        title="针对不同行业的深度解决方案"
-        subtitle="根据行业特性预置流程模板与指标，支持快速上线并与现有系统打通，助力业务全面数字化。"
-        eyebrow="行业实践"
+        title="最新上架源码与热门资源"
+        subtitle="从加拿大PC28到真人直播、彩票、区块链交易所，多类源码均可在站内获取。"
+        eyebrow="最新发布"
       />
       <Row gutter={[24, 24]} justify="center">
-        {solutionList.map((solution) => (
-          <Col key={solution.key} xs={12} lg={6}>
-            <Card
-              className="solution-card"
-              bordered={false}
-              hoverable
-              cover={
-                <div className="solution-card__media">
-                  <img src={solution.image} alt={`${solution.title} 插画`} />
-                </div>
-              }
-              bodyStyle={{ padding: 0 }}
-            >
-              <div className="solution-card__content">
-                <Text className="solution-sector">{solution.sector}</Text>
-                <Title level={4}>{solution.title}</Title>
-                <Paragraph>{solution.description}</Paragraph>
-                <div className="solution-tags">
-                  {solution.tags.map((tag) => (
-                    <Tag key={tag} color="blue">
-                      {tag}
-                    </Tag>
-                  ))}
-                </div>
-              </div>
-              <div className="solution-card__footer">
-                <Text className="solution-card__price">{solution.price}</Text>
-                <Button type="primary" size="large" block>
+        {resourceList.slice(0, 12).map((resource) => (
+          <Col key={resource.key} xs={24} md={12} lg={8}>
+            <Card className="resource-card" bordered={false} hoverable>
+              <Text className="resource-card__category">{resource.category}</Text>
+              <Title level={4} className="resource-card__title">
+                <a href={resource.link} target="_blank" rel="noreferrer">
+                  {resource.title}
+                </a>
+              </Title>
+              <Paragraph className="resource-card__excerpt">{resource.excerpt}</Paragraph>
+              <div className="resource-card__footer">
+                <Text className="resource-card__price">¥{resource.price}</Text>
+                <Button
+                  type="primary"
+                  href={resource.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  size="middle"
+                >
                   查看详情
                 </Button>
               </div>

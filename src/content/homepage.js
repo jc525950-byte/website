@@ -1,164 +1,216 @@
 export const heroHighlights = [
-  { title: '销售额提升', value: '36%' },
-  { title: '客户满意度', value: '4.9/5' },
-  { title: '部署时间', value: '7天' },
+  { title: '行业经验', value: '15年' },
+  { title: '运维保障', value: '24小时' },
+  { title: '质量保障', value: '亲测调试' },
 ];
 
-export const featureList = [
-  {
-    key: 'workflow',
-    icon: 'workflow',
-    title: '一体化销售流程',
-    description:
-      '统一线索、商机与回款流程，智能分配任务，自动提醒下一个最佳行动。',
-  },
-  {
-    key: 'assistant',
-    icon: 'assistant',
-    title: 'AI 驱动的对话助手',
-    description:
-      '实时生成电话与邮件话术，支持智能质检，轻松复制明星销售经验。',
-  },
-  {
-    key: 'analytics',
-    icon: 'analytics',
-    title: '多维度数据洞察',
-    description:
-      '构建从市场到客户成功的全链路仪表盘，决策更快更准确。',
-  },
-  {
-    key: 'collaboration',
-    icon: 'collaboration',
-    title: '协同赋能团队',
-    description:
-      '跨部门共享客户画像与协作记录，实现销售、市场、客服的一体化协作。',
-  },
+export const articleCategories = [
+  { key: 'qipai', label: '棋牌源码' },
+  { key: 'bocai', label: '菠菜源码' },
+  { key: 'website', label: '网站源码' },
+  { key: 'live', label: '直播源码' },
+  { key: 'h5', label: 'H5源码' },
 ];
 
-export const solutionList = [
+export const resourceList = [
   {
-    key: 'saas',
-    sector: 'SaaS & 互联网',
-    title: '订阅收入增长方案',
-    description:
-      '从试用到续费的关键节点实现自动化触达，结合 AI 健康度评分预警流失风险。',
-    tags: ['试用激活', '续费预测', '客户成功'],
-    price: '¥1,999/月起',
-    image: '/images/solution-saas.svg',
+    key: '59359',
+    title: '金鑫娱乐源码/多玩法加拿大PC28/无限代推广/带接口游戏',
+    link: 'https://www.kvxr.com/59359.html',
+    categories: ['H5源码', '菠菜源码'],
+    excerpt:
+      '【金鑫娱乐源码】是一个集真人视讯、电子、体育、棋牌、彩票游戏等综合游戏平台，...',
+    price: '1380',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/10/05121229636-300x200.jpg',
   },
   {
-    key: 'manufacturing',
-    sector: '制造业',
-    title: '渠道分销数字化方案',
-    description:
-      '整合经销商数据，实现跨区域线索同步，提升报价效率与订单透明度。',
-    tags: ['渠道管理', '移动巡店', 'BI 报表'],
-    price: '¥2,899/月起',
-    image: '/images/solution-manufacturing.svg',
+    key: '59325',
+    title: 'Stripchat全球性爱直播源码/免费视频直播节目/最佳成人色情网站',
+    link: 'https://www.kvxr.com/59325.html',
+    categories: ['直播源码'],
+    excerpt:
+      'Stripchat全球性爱直播源码 是一个国际成人网络直播平台，拥有来自世界各地的模特...',
+    price: '1680',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/09/24081334344-300x200.jpg',
   },
   {
-    key: 'finance',
-    sector: '金融服务',
-    title: '精准营销与合规监控方案',
-    description:
-      '基于客户画像自动筛选理财产品，通过智能质检与通话存档满足监管要求。',
-    tags: ['客户画像', '智能质检', '合规管理'],
-    price: '¥3,299/月起',
-    image: '/images/solution-finance.svg',
+    key: '59290',
+    title: '魅思视频二开星空影视源码/真人直播漫画小说约炮游戏一体',
+    link: 'https://www.kvxr.com/59290.html',
+    categories: ['H5源码', '直播源码'],
+    excerpt:
+      '网上的流传的版本有很多BUG，而且手机版非常卡。而且没有APP设置。源码是花重金购...',
+    price: '2180',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/09/18044816483-300x200.jpg',
   },
   {
-    key: 'retail',
-    sector: '零售连锁',
-    title: '全渠道会员增长方案',
-    description:
-      '联动门店、APP 与小程序，实现精准优惠推送与会员生命周期价值管理。',
-    tags: ['会员运营', '全渠道触达', '库存联动'],
-    price: '¥1,499/月起',
-    image: '/images/solution-retail.svg',
-  },
-];
-
-export const pricingPlans = [
-  {
-    key: 'growth',
-    name: '成长版',
-    price: '¥299/月',
-    description: '适合 10 人以内销售团队，快速搭建标准化 CRM 流程。',
-    features: ['线索与客户管理', '自动提醒与任务分配', '邮件与日历集成'],
+    key: '59263',
+    title: 'Lucky Dragons美国老虎机源码/英文版拉霸角子老虎机游戏',
+    link: 'https://www.kvxr.com/59263.html',
+    categories: ['H5源码', '棋牌源码'],
+    excerpt:
+      'Lucky Dragons美国老虎机源码是 Pragmatic Play 推出的一款在线老虎机游戏。它具有...',
+    price: '2380',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/09/10215921366-300x200.jpg',
   },
   {
-    key: 'professional',
-    name: '专业版',
-    price: '¥599/月',
-    description: '覆盖从线索到回款的全流程，内置行业模板与自动化引擎。',
-    features: ['多渠道线索捕获', 'AI 智能话术与质检', '自定义仪表盘'],
-    highlighted: true,
+    key: '59223',
+    title: 'GO99越南综合盘源码/东南亚第一老虎机博彩游戏网站',
+    link: 'https://www.kvxr.com/59223.html',
+    categories: ['菠菜源码'],
+    excerpt:
+      'GO99越南综合盘源码 是一家成立于 2025 年、信誉卓著的在线博彩公司，持有 PAGCOR ...',
+    price: '1680',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/08/09192420605-300x200.jpg',
   },
   {
-    key: 'enterprise',
-    name: '企业版',
-    price: '定制报价',
-    description: '满足大型集团与跨区域团队的复杂协作、安全与合规需求。',
-    features: ['专属客户成功团队', '私有化或混合云部署', '高级安全与审计'],
-  },
-];
-
-export const testimonialList = [
-  {
-    key: 'saleplus',
-    name: '李晨',
-    title: 'SalePlus 销售副总裁',
-    quote:
-      'SkySales 帮我们在两个月内搭建起统一的销售流程，AI 对话助手让新人上手速度提升了 3 倍。',
+    key: '59197',
+    title: '最新番摊机器人源码/澳洲幸运5番摊/1234机器人/澳洲幸运8番摊',
+    link: 'https://www.kvxr.com/59197.html',
+    categories: ['H5源码', '菠菜源码'],
+    excerpt:
+      '最新拿下番摊机器人源码，前端vue，后端GO，前端丝滑般流畅，目前有澳洲幸运5、澳...',
+    price: '1580',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/07/15152044416-300x200.jpg',
   },
   {
-    key: 'manufacture',
-    name: '王静',
-    title: '晨曦制造 数字化总监',
-    quote:
-      '我们将经销商系统与 SkySales 打通后，报价效率提升 45%，管理层能实时看到渠道健康度。',
+    key: '59152',
+    title: 'YunGou云购夺宝源码/海外版一元购系统/多语言云购竞猜',
+    link: 'https://www.kvxr.com/59152.html',
+    categories: ['网站源码'],
+    excerpt:
+      '2025最新运营版YunGou云购夺宝源码，海外版云购源码多语言版本，4套前端UI界面，带...',
+    price: '1680',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/07/13155010884-300x200.jpg',
   },
   {
-    key: 'finance',
-    name: '陈浩',
-    title: '恒泰金融 客户成功负责人',
-    quote:
-      'SkySales 的数据仪表盘帮助我们精准定位流失风险，合规质检也极大减少了审查时间。',
-  },
-];
-
-export const partnerLogos = [
-  { key: 'bytewave', name: 'ByteWave' },
-  { key: 'fusionpay', name: 'FusionPay' },
-  { key: 'nova', name: 'Nova Logistics' },
-  { key: 'aurora', name: 'Aurora Labs' },
-  { key: 'zenwell', name: 'Zenwell Bank' },
-  { key: 'visionmax', name: 'VisionMax Retail' },
-];
-
-export const faqList = [
-  {
-    key: 'deploy',
-    question: '部署与上线需要多久？',
-    answer:
-      '标准云版本最快 7 天即可完成部署并培训到位。若需私有化或混合云部署，我们会提供专项项目经理与迁移方案，确保数据安全与业务连续性。',
+    key: '59114',
+    title: '妹团约会交友品茶源码/妹团俱乐部/空降约炮APP/楼凤社交圈',
+    link: 'https://www.kvxr.com/59114.html',
+    categories: ['H5源码', '直播源码'],
+    excerpt:
+      '【妹团约会交友品茶源码】是全网领先的真实品茶服务平台，致力于为高端用户提供安...',
+    price: '1880',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/07/01205807441-300x200.jpg',
   },
   {
-    key: 'integration',
-    question: 'SkySales 能与现有系统打通吗？',
-    answer:
-      '支持与主流 ERP、财务、客服系统进行 API 或中间件集成，并提供开放平台与 Webhook，帮助企业构建自己的数字化闭环。',
+    key: '59077',
+    title: 'MaxPlay基诺游戏源码/国外彩票RNG/TableGame赌场游戏',
+    link: 'https://www.kvxr.com/59077.html',
+    categories: ['菠菜源码'],
+    excerpt:
+      'MaxPlay基诺游戏源码是一家在 RNG 行业拥有超过 7 年经验的在线游戏提供商。秉承“...',
+    price: '2680',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/06/26222407654-300x200.jpg',
   },
   {
-    key: 'security',
-    question: '数据安全如何保障？',
-    answer:
-      '我们通过 ISO 27001、等级保护等安全认证，提供细粒度权限、操作审计、数据加密与备份策略，帮助企业满足合规要求。',
+    key: '59049',
+    title: '多彩直播APP源码/多彩直播平台/多彩直播官网/多彩直播下载',
+    link: 'https://www.kvxr.com/59049.html',
+    categories: ['直播源码'],
+    excerpt:
+      '多彩直播APP源码是原生前端开发的一款直播源码，内置了彩票游戏和API接口游戏！热...',
+    price: '2680',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/06/25211331423-300x200.jpg',
   },
   {
-    key: 'support',
-    question: '是否提供客户成功服务？',
-    answer:
-      '专业版及以上客户将拥有专属客户成功顾问，提供定期业务回顾、行业最佳实践与二次培训，协助团队持续产出价值。',
+    key: '59015',
+    title: 'SABA SPORTS沙巴体育源码/体育投注API/足球外放接口/自研体育直播',
+    link: 'https://www.kvxr.com/59015.html',
+    categories: ['菠菜源码'],
+    excerpt:
+      'SABA SPORTS沙巴体育源码（前名为IBCBet Sportsbook）是亚洲首屈一指的体育包网博...',
+    price: '2380',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/06/25091804726-300x200.jpg',
+  },
+  {
+    key: '58989',
+    title: 'Jaiho Spin Yono印度老虎机源码/英文版Slots在线游戏平台',
+    link: 'https://www.kvxr.com/58989.html',
+    categories: ['棋牌源码'],
+    excerpt:
+      'Jaiho Spin印度老虎机源码致力于提供高品质娱乐体验，让您轻松畅玩喜爱的游戏。它...',
+    price: '2880',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/06/24192131490-300x200.jpg',
+  },
+  {
+    key: '58962',
+    title: '圣泰俱乐部台球赛事竞猜源码/台球下注APP/斯诺克在线投注',
+    link: 'https://www.kvxr.com/58962.html',
+    categories: ['H5源码', '菠菜源码'],
+    excerpt:
+      '圣泰俱乐部台球赛事竞猜源码平台专注于中式台球领域，国内首家线上竞猜平台，每天...',
+    price: '1480',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/06/23190139735-300x200.jpg',
+  },
+  {
+    key: '58937',
+    title: '大唐麻将全集源码/大唐麻将app下载/大唐棋牌游戏/大唐互娱官方网站',
+    link: 'https://www.kvxr.com/58937.html',
+    categories: ['棋牌源码'],
+    excerpt:
+      '大唐麻将全集源码是一款传统的中国麻将游戏，它源自唐朝时期，是中国最古老的麻将...',
+    price: '1280',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/06/21162612184-300x200.jpg',
+  },
+  {
+    key: '58900',
+    title: 'NEEX LLC综合交易所源码/智能交易/股票预售/期货交易',
+    link: 'https://www.kvxr.com/58900.html',
+    categories: ['网站源码'],
+    excerpt:
+      'NEEX LLC综合交易所源码是一家基于区块链技术产品的国际金融交易公司。我们公司总...',
+    price: '1680',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/06/13165724909-300x200.jpg',
+  },
+  {
+    key: '58884',
+    title: '走地大球分析软件源码/滚球大球分析软件/足球比赛自动预测系统',
+    link: 'https://www.kvxr.com/58884.html',
+    categories: ['网站源码'],
+    excerpt:
+      '走地大球分析软件源码V3是基于最新云端大数据分析引擎的第四代走地大球自动预测系...',
+    price: '880',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/06/11173133879-300x200.jpg',
+  },
+  {
+    key: '58868',
+    title: '足球分析软件源码高级版（欧赔亚盘大小综合全能版）',
+    link: 'https://www.kvxr.com/58868.html',
+    categories: ['网站源码'],
+    excerpt:
+      '足球分析软件源码于2010年正式推出，至今走过超十年时间，为全球数以万计的足球玩...',
+    price: '880',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/06/10160558199-300x200.jpg',
+  },
+  {
+    key: '58835',
+    title: '28圈娱乐源码/28圈官方网站/28圈app下载/加拿大28预测',
+    link: 'https://www.kvxr.com/58835.html',
+    categories: ['H5源码', '菠菜源码'],
+    excerpt:
+      '28圈娱乐源码的快速发展，游戏玩家对游戏的需求也变得越来越高。在众多游戏选择中...',
+    price: '1680',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/06/08172930799-300x200.jpg',
+  },
+  {
+    key: '58741',
+    title: '147台球赛事源码/斯诺克桌球外围下注盘口/中八九球在线竞猜投注系统',
+    link: 'https://www.kvxr.com/58741.html',
+    categories: ['菠菜源码'],
+    excerpt:
+      '147台球赛事源码是中8台球（也称中式台球）赛事指的是结合了斯诺克和美式八球规则...',
+    price: '880',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/05/24110537885-300x200.jpg',
+  },
+  {
+    key: '58709',
+    title: '高仿Lazada领航跨境电商平台源码/多语言购物网站/商家与供应商入驻',
+    link: 'https://www.kvxr.com/58709.html',
+    categories: ['网站源码'],
+    excerpt:
+      'Lazada Group成立于2012年，高仿Lazada领航跨境电商平台源码是东南亚领先的电子商...',
+    price: '1580',
+    image: 'https://www.kvxr.com/wp-content/uploads/2025/05/24021218394-300x200.jpg',
   },
 ];

@@ -23,9 +23,9 @@ export default function FeaturesSection() {
     <section id="features" className="features section" aria-labelledby="features-title">
       <SectionHeader
         id="features-title"
-        title="用一套系统解决增长过程中遇到的阻力"
-        subtitle="SkySales 聚焦客户全生命周期，通过自动化引擎和数据驱动的洞察帮助团队持续复盘与优化。"
-        eyebrow="核心能力"
+        title="平台服务亮点"
+        subtitle="聚焦源码收录、亲测调试与运维保障，让站长在东南亚项目落地更安心。"
+        eyebrow="服务优势"
       />
       <Row gutter={[24, 24]}>
         {featureList.map((feature) => {

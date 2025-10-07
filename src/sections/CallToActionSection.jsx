@@ -5,34 +5,34 @@ const { Title, Paragraph } = Typography;
 
 export default function CallToActionSection() {
   return (
-    <section id="cta" className="cta section" aria-labelledby="cta-title">
+    <section id="contact" className="cta section" aria-labelledby="cta-title">
       <Row gutter={[32, 32]} align="middle" justify="center">
         <Col xs={24} lg={10}>
           <Title level={2} id="cta-title">
-            安排一场个性化演示，了解 SkySales 如何助力增长
+            提交需求，获取站长快速回应
           </Title>
           <Paragraph>
-            留下您的联系方式，我们的顾问将在 1 个工作日内与您联系，提供专属行业演示与 ROI 评估。
+            留下您的合作意向或源码需求，站长团队会在 24 小时内通过站内私信或 Telegram 与您确认细节。
           </Paragraph>
         </Col>
         <Col xs={24} lg={10}>
           <div className="cta-form-wrapper" role="form">
             <Form layout="vertical">
-              <Form.Item label="姓名" required>
-                <Input size="large" placeholder="请输入您的姓名" />
+              <Form.Item label="联系人" required>
+                <Input size="large" placeholder="请输入称呼或公司名称" />
               </Form.Item>
-              <Form.Item label="工作邮箱" required>
-                <Input size="large" type="email" placeholder="name@company.com" />
+              <Form.Item label="联系方式" required>
+                <Input size="large" placeholder="微信号 / Telegram / 邮箱" />
               </Form.Item>
-              <Form.Item label="所在行业">
-                <Input size="large" placeholder="例如：SaaS / 制造 / 金融" />
+              <Form.Item label="需求分类">
+                <Input size="large" placeholder="如：棋牌源码、支付渠道、广告投放" />
               </Form.Item>
-              <Form.Item label="当前团队规模">
-                <Input size="large" placeholder="请输入人数" />
+              <Form.Item label="补充说明">
+                <Input.TextArea rows={4} placeholder="补充上线时间、预算或其他说明" />
               </Form.Item>
               <Form.Item>
                 <Button type="primary" htmlType="submit" size="large" block>
-                  提交信息，预约演示
+                  提交信息，等待站长联系
                 </Button>
               </Form.Item>
             </Form>

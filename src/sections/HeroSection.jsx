@@ -7,21 +7,21 @@ export default function HeroSection() {
     <section id="hero" className="hero section" aria-labelledby="hero-title">
       <Row gutter={[48, 48]} align="middle" justify="space-between">
         <Col xs={24} lg={12}>
-          <Tag color="blue" className="hero-tag">
-            新版 v3.2 发布 · AI 销售助手全面升级
+          <Tag color="orange" className="hero-tag">
+            南亚源码网 · 包网搭建与源码交易平台
           </Tag>
           <h1 id="hero-title" className="hero-title">
-            SkySales — 让销售团队的每一次对话更智能
+            南亚源码网 — 免费源码、源码交易、网站源码下载
           </h1>
           <p className="hero-subtitle">
-            集成 CRM、自动化营销、AI 话术建议与全渠道数据分析，打造以客户为中心的销售增长闭环。
+            马来西亚专业技术团队一站式平台包网搭建开发，提供棋牌、菠菜、直播、交易所、H5 等多类源码资源，站长亲测调试，助你项目快速上线。
           </p>
           <Space size="large" className="hero-actions">
-            <Button type="primary" size="large" href="#pricing">
-              获取专业版
+            <Button type="primary" size="large" href="#resources">
+              浏览最新源码
             </Button>
-            <Button size="large" href="#cta">
-              预约顾问演示
+            <Button size="large" href="#contact">
+              联系客服对接
             </Button>
           </Space>
           <div className="hero-stats" role="list">

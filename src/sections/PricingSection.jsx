@@ -1,42 +1,34 @@
-import { Badge, Button, Card, Col, Row, Typography } from 'antd';
+import { Button, Card, Col, Row, Typography } from 'antd';
 import SectionHeader from '../components/SectionHeader.jsx';
-import { pricingPlans } from '../content/homepage.js';
+import { servicePlans } from '../content/homepage.js';
 import './PricingSection.css';
 
-const { Title, Paragraph, Text } = Typography;
+const { Title, Paragraph } = Typography;
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="pricing section" aria-labelledby="pricing-title">
+    <section id="services" className="pricing section" aria-labelledby="pricing-title">
       <SectionHeader
         id="pricing-title"
-        title="灵活定价，按需成长"
-        subtitle="根据团队规模随时升级，数据和流程无缝迁移。支持企业定制与私有化部署。"
-        eyebrow="价格方案"
+        title="合作服务入口"
+        subtitle="广告投放、支付渠道、营销渠道及云服务等合作信息，可通过以下入口对接站长团队。"
+        eyebrow="商务合作"
       />
       <Row gutter={[24, 24]}>
-        {pricingPlans.map((plan) => (
+        {servicePlans.map((plan) => (
           <Col key={plan.key} xs={24} md={8}>
-            <Badge.Ribbon text="最受欢迎" color="blue" style={{ display: plan.highlighted ? 'block' : 'none' }}>
-              <Card className={`pricing-card ${plan.highlighted ? 'pricing-card--highlighted' : ''}`}>
-                <Title level={4}>{plan.name}</Title>
-                <Text className="pricing-card__price">{plan.price}</Text>
-                <Paragraph>{plan.description}</Paragraph>
-                <ul className="pricing-card__list">
-                  {plan.features.map((feature) => (
-                    <li key={feature}>{feature}</li>
-                  ))}
-                </ul>
-                <Button
-                  type={plan.highlighted ? 'primary' : 'default'}
-                  size="large"
-                  block
-                  href="#cta"
-                >
-                  联系销售
-                </Button>
-              </Card>
-            </Badge.Ribbon>
+            <Card className="pricing-card" bordered={false} hoverable>
+              <Title level={4}>{plan.name}</Title>
+              <Paragraph>{plan.description}</Paragraph>
+              <ul className="pricing-card__list">
+                {plan.features.map((feature) => (
+                  <li key={feature}>{feature}</li>
+                ))}
+              </ul>
+              <Button type="primary" size="large" block href={plan.href} target="_blank" rel="noreferrer">
+                查看合作详情
+              </Button>
+            </Card>
           </Col>
         ))}
       </Row>
