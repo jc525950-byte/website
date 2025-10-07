@@ -1,0 +1,35 @@
+.pricing-card {
+  height: 100%;
+  padding: 32px;
+  border-radius: 28px;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pricing-card--highlighted {
+  border: 2px solid rgba(47, 84, 235, 0.5);
+  transform: translateY(-8px);
+}
+
+.pricing-card__price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2f54eb;
+}
+
+.pricing-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+  color: #4a5568;
+}
+
+.pricing-card__list li::before {
+  content: '✓';
+  color: #2f54eb;
+  margin-right: 8px;
+}
