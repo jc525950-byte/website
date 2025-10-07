@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="SkySales 软件解决方案，助力企业数字化转型的专业软件销售官网。"
+    />
+    <title>SkySales 软件销售官网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd@5/dist/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd@5/dist/antd.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/antd@5/dist/antd.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav" aria-label="主导航">
+        <a class="logo" href="#hero" aria-label="返回首页">
+          <span class="logo-mark">Sky</span><span class="logo-text">Sales</span>
+        </a>
+        <button class="mobile-menu" id="mobileMenu" aria-label="展开导航">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#features">产品特性</a></li>
+          <li><a href="#solutions">行业方案</a></li>
+          <li><a href="#pricing">价格方案</a></li>
+          <li><a href="#testimonials">客户口碑</a></li>
+          <li><a href="#cta">获取演示</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="root"></main>
+
+    <footer class="global-footer">
+      <p>© <span id="year"></span> SkySales. 版权所有。</p>
+      <nav aria-label="底部导航">
+        <a href="#features">产品</a>
+        <a href="#pricing">价格</a>
+        <a href="#cta">联系我们</a>
+        <a href="#privacy">隐私政策</a>
+      </nav>
+    </footer>
+
+    <script type="text/babel">
+      const { ConfigProvider, Button, Card, Col, Row, Typography, Tag, Space, Timeline } = antd;
+      const { Title, Paragraph, Text } = Typography;
+
+      const Page = () => {
+        React.useEffect(() => {
+          const navLinks = document.getElementById('navLinks');
+          const mobileMenu = document.getElementById('mobileMenu');
+          const toggleMenu = () => navLinks.classList.toggle('open');
+          mobileMenu.addEventListener('click', toggleMenu);
+          return () => mobileMenu.removeEventListener('click', toggleMenu);
+        }, []);
+
+        return (
+          <ConfigProvider
+            theme={{
+              token: {
+                colorPrimary: '#2563eb',
+                fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+              },
+            }}
+          >
+            <article>
+              <section id="hero" className="hero" aria-label="首屏介绍">
+                <div className="hero-content">
+                  <Title level={1}>
+                    智能化销售管理软件
+                    <span className="highlight">，提升团队业绩增长 3 倍</span>
+                  </Title>
+                  <Paragraph>
+                    SkySales 将 CRM、合同、财务与 AI 智能分析整合在一体，通过自动化工作流帮助销售团队更快成交，全面掌握客户生命周期。
+                  </Paragraph>
+                  <Space size="middle" wrap>
+                    <Button type="primary" size="large" href="#cta">
+                      预约产品演示
+                    </Button>
+                    <Button size="large" type="default" href="#features">
+                      查看产品特性
+                    </Button>
+                  </Space>
+                  <div className="hero-stats" aria-label="核心数据">
+                    <div>
+                      <strong>98%</strong>
+                      <span>客户满意度</span>
+                    </div>
+                    <div>
+                      <strong>30+</strong>
+                      <span>行业最佳实践</span>
+                    </div>
+                    <div>
+                      <strong>15 天</strong>
+                      <span>快速上线</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="hero-card">
+                  <Card bordered={false} title="实时销售看板">
+                    <Timeline
+                      items={[
+                        { color: 'green', children: '成交金额同比增长 120% 🔥' },
+                        { color: 'blue', children: '新增 36 条高意向线索' },
+                        { color: 'gray', children: '需跟进合同：8 份' },
+                        { color: 'orange', children: 'AI 提醒：回访重点客户' },
+                      ]}
+                    />
+                  </Card>
+                </div>
+              </section>
+
+              <section id="features" className="section" aria-label="产品特性">
+                <Title level={2}>一站式销售闭环，助力团队提效</Title>
+                <Paragraph type="secondary">
+                  通过模块化功能覆盖线索、商机、合同、回款等全流程，实现销售团队的高效协作。
+                </Paragraph>
+                <Row gutter={[24, 24]}>
+                  {[
+                    {
+                      title: 'AI 智能助手',
+                      description: '智能生成销售话术，自动识别高意向客户，实时发送跟进提醒。',
+                      tag: '智能化',
+                    },
+                    {
+                      title: '全渠道线索管理',
+                      description: '整合官网表单、社交媒体、线下活动线索，统一分配与评分。',
+                      tag: '线索管理',
+                    },
+                    {
+                      title: '流程自动化',
+                      description: '可视化拖拽配置审批、合同、回款流程，让业务自动运转。',
+                      tag: '自动化',
+                    },
+                    {
+                      title: '实时数据分析',
+                      description: '支持自定义看板与报表，决策层随时掌握销售漏斗健康度。',
+                      tag: '数据洞察',
+                    },
+                  ].map((feature) => (
+                    <Col xs={24} sm={12} lg={6} key={feature.title}>
+                      <Card className="feature-card" title={feature.title} bordered>
+                        <Tag color="blue">{feature.tag}</Tag>
+                        <Paragraph>{feature.description}</Paragraph>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+              </section>
+
+              <section id="solutions" className="section section-alt" aria-label="行业方案">
+                <Title level={2}>贴近不同行业场景的解决方案</Title>
+                <div className="solutions-grid">
+                  {[
+                    {
+                      title: '科技企业',
+                      description:
+                        '帮助 SaaS 与 IT 服务企业快速搭建订阅管理、续费提醒与客户成功流程。',
+                    },
+                    {
+                      title: '制造业',
+                      description:
+                        '适配工程项目制与渠道分销模式，实时跟踪报价进度和交付状态。',
+                    },
+                    {
+                      title: '专业服务业',
+                      description:
+                        '覆盖咨询、培训等项目型业务，从商机洽谈到合同回款全流程管理。',
+                    },
+                  ].map((solution) => (
+                    <article className="solution-card" key={solution.title}>
+                      <Title level={4}>{solution.title}</Title>
+                      <Paragraph>{solution.description}</Paragraph>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <section id="pricing" className="section" aria-label="价格方案">
+                <Title level={2}>灵活的价格，适配不同成长阶段</Title>
+                <Paragraph type="secondary">
+                  按团队规模与功能模块自由组合，随企业成长扩展。
+                </Paragraph>
+                <Row gutter={[24, 24]}>
+                  {[
+                    {
+                      name: '成长版',
+                      price: '¥ 499 / 月',
+                      features: ['10 名坐席', '线索池与商机管理', '基础自动化流程'],
+                      primary: false,
+                    },
+                    {
+                      name: '旗舰版',
+                      price: '¥ 1,299 / 月',
+                      features: ['不限坐席', '高级 AI 助手', '自定义报表与看板'],
+                      primary: true,
+                    },
+                    {
+                      name: '企业定制版',
+                      price: '联系我们',
+                      features: ['专属顾问服务', '私有化部署', '行业深度定制'],
+                      primary: false,
+                    },
+                  ].map((plan) => (
+                    <Col xs={24} md={8} key={plan.name}>
+                      <Card
+                        className={`pricing-card${plan.primary ? ' primary' : ''}`}
+                        title={plan.name}
+                        bordered
+                        extra={<Text strong>{plan.price}</Text>}
+                      >
+                        <ul>
+                          {plan.features.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                        <Button type={plan.primary ? 'primary' : 'default'} block size="large">
+                          立即咨询
+                        </Button>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+              </section>
+
+              <section id="testimonials" className="section section-alt" aria-label="客户口碑">
+                <Title level={2}>超过 2,000 家企业正在使用 SkySales</Title>
+                <Row gutter={[24, 24]}>
+                  {[
+                    {
+                      quote:
+                        'SkySales 帮助我们搭建了一套标准化的销售流程，销售线索转化率提升了 40%。',
+                      name: '刘伟 · 华东区销售总监',
+                    },
+                    {
+                      quote:
+                        '自动化审批和合同模板极大压缩了交付周期，团队协同效率显著提升。',
+                      name: '张敏 · 制造业数字化负责人',
+                    },
+                    {
+                      quote:
+                        'AI 智能助手让客户成功团队的跟进更及时，客户续费率提升 30%。',
+                      name: '王强 · SaaS 创业公司 CEO',
+                    },
+                  ].map((testimonial) => (
+                    <Col xs={24} md={8} key={testimonial.name}>
+                      <Card className="testimonial-card" bordered>
+                        <Paragraph className="quote">“{testimonial.quote}”</Paragraph>
+                        <Text type="secondary">{testimonial.name}</Text>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+              </section>
+
+              <section id="cta" className="section cta" aria-label="获取演示">
+                <Title level={2}>预约 30 分钟专属演示，立即体验智能销售</Title>
+                <Paragraph>
+                  填写信息后，我们的顾问将在 1 个工作日内与您联系，提供行业实践建议。
+                </Paragraph>
+                <div className="cta-actions">
+                  <Button type="primary" size="large">
+                    安排演示
+                  </Button>
+                  <Button size="large" type="link">
+                    下载产品白皮书
+                  </Button>
+                </div>
+              </section>
+
+              <section id="privacy" className="section section-small" aria-label="隐私政策">
+                <Title level={4}>隐私与数据安全承诺</Title>
+                <Paragraph type="secondary">
+                  我们遵循 ISO 27001 与 GDPR 数据安全标准，所有客户数据采用多重加密存储并提供访问审计功能。
+                </Paragraph>
+              </section>
+            </article>
+          </ConfigProvider>
+        );
+      };
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<Page />);
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
