@@ -6,10 +6,12 @@ import './ResponsiveHeader.css';
 const { Header } = Layout;
 
 const navItems = [
+  { key: 'partners', label: '合作伙伴', href: '#partners' },
   { key: 'features', label: '产品特性', href: '#features' },
   { key: 'solutions', label: '行业方案', href: '#solutions' },
   { key: 'pricing', label: '价格套餐', href: '#pricing' },
   { key: 'testimonials', label: '客户成功', href: '#testimonials' },
+  { key: 'faq', label: '常见问题', href: '#faq' },
 ];
 
 export default function ResponsiveHeader() {

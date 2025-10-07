@@ -1,11 +1,6 @@
 import { Button, Col, Row, Space, Statistic, Tag } from 'antd';
+import { heroHighlights } from '../content/homepage.js';
 import './HeroSection.css';
-
-const stats = [
-  { title: '销售额提升', value: '36%' },
-  { title: '客户满意度', value: '4.9/5' },
-  { title: '部署时间', value: '7天' },
-];
 
 export default function HeroSection() {
   return (
@@ -30,7 +25,7 @@ export default function HeroSection() {
             </Button>
           </Space>
           <div className="hero-stats" role="list">
-            {stats.map((item) => (
+            {heroHighlights.map((item) => (
               <div key={item.title} role="listitem" className="hero-stat">
                 <Statistic value={item.value} title={item.title} />
               </div>

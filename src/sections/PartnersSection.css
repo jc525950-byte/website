@@ -1,0 +1,29 @@
+.partners {
+  background: #fff;
+}
+
+.partners-grid {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.partner-badge {
+  height: 72px;
+  border-radius: 16px;
+  border: 1px solid rgba(47, 84, 235, 0.18);
+  background: linear-gradient(180deg, rgba(47, 84, 235, 0.04), rgba(47, 84, 235, 0));
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #1f2633;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .partner-badge {
+    font-size: 14px;
+    height: 64px;
+  }
+}
