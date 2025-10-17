@@ -14,7 +14,7 @@ export default function FooterSection() {
             南亚源码网
           </Link>{' '}
           版权所有{' '}
-          <Link href="https://www.kvxr.com/sitemap.xml" target="_blank" rel="noreferrer">
+          <Link href="/sitemap.xml" target="_blank" rel="noreferrer">
             网站地图
           </Link>
         </Text>

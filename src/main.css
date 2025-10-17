@@ -4,6 +4,7 @@
   background-color: #fff8f4;
   line-height: 1.5;
   font-weight: 400;
+  --content-max-width: 1200px;
   scroll-behavior: smooth;
 }
 
@@ -30,7 +31,7 @@ img {
 
 .section {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
   padding: 96px 0;
 }
@@ -41,6 +42,6 @@ img {
   }
 
   .section {
-    padding: 64px 0;
+    padding: 48px 16px;
   }
 }

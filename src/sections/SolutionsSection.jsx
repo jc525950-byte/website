@@ -15,31 +15,35 @@ export default function SolutionsSection() {
         eyebrow="最新发布"
       />
       <Row gutter={[24, 24]} justify="center">
-        {resourceList.slice(0, 12).map((resource) => (
-          <Col key={resource.key} xs={24} md={12} lg={8}>
-            <Card className="resource-card" bordered={false} hoverable>
-              <Text className="resource-card__category">{resource.category}</Text>
-              <Title level={4} className="resource-card__title">
-                <a href={resource.link} target="_blank" rel="noreferrer">
-                  {resource.title}
-                </a>
-              </Title>
-              <Paragraph className="resource-card__excerpt">{resource.excerpt}</Paragraph>
-              <div className="resource-card__footer">
-                <Text className="resource-card__price">¥{resource.price}</Text>
-                <Button
-                  type="primary"
-                  href={resource.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  size="middle"
-                >
-                  查看详情
-                </Button>
-              </div>
-            </Card>
-          </Col>
-        ))}
+        {resourceList.slice(0, 12).map((resource) => {
+          const category = resource.categories?.[0] ?? '综合资源';
+          const priceLabel = resource.price ? `¥${resource.price}` : '免费体验';
+          return (
+            <Col key={resource.key} xs={24} md={12} lg={8}>
+              <Card className="resource-card" bordered={false} hoverable>
+                <Text className="resource-card__category">{category}</Text>
+                <Title level={4} className="resource-card__title">
+                  <a href={resource.link} target="_blank" rel="noreferrer">
+                    {resource.title}
+                  </a>
+                </Title>
+                <Paragraph className="resource-card__excerpt">{resource.excerpt}</Paragraph>
+                <div className="resource-card__footer">
+                  <Text className="resource-card__price">{priceLabel}</Text>
+                  <Button
+                    type="primary"
+                    href={resource.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    size="middle"
+                  >
+                    查看详情
+                  </Button>
+                </div>
+              </Card>
+            </Col>
+          );
+        })}
       </Row>
     </section>
   );

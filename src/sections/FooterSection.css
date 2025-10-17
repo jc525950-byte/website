@@ -1,12 +1,12 @@
 .footer {
   background: #0f172a;
   color: rgba(255, 255, 255, 0.72);
-  padding: 48px 24px;
+  padding: 72px 24px;
 }
 
 .footer-inner {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -29,4 +29,10 @@
 
 .footer-copy a:hover {
   color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 16px;
+  }
 }
