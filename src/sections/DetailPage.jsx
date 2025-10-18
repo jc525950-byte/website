@@ -62,10 +62,7 @@ export default function DetailPage() {
 
             <div className="detail-header-box__content">
               <header className="detail-header">
-                <Tag color="green" className="detail-status">
-                  {detailHeader.status}
-                </Tag>
-                <Title level={1} id="detail-title">
+                <Title level={1} id="detail-title" className="detail-title">
                   {detailHeader.title}
                 </Title>
                 <div className="detail-meta">
@@ -77,9 +74,35 @@ export default function DetailPage() {
                 </div>
               </header>
 
-              <Paragraph className="detail-summary">
-                {detailHeader.summary}
-              </Paragraph>
+              <div className="detail-header-box__footer">
+                <div className="detail-service" aria-label="服务保障">
+                  <span className="detail-service__label">服务保障</span>
+                  <ul className="detail-service-list">
+                    {servicePerks.map((perk) => (
+                      <li key={perk}>
+                        <span className="detail-service-list__dot" aria-hidden="true" />
+                        <span>{perk}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="detail-download" role="group" aria-label="资源下载信息">
+                  <div className="detail-download__row">
+                    <span className="detail-download__price">
+                      <strong className="detail-download__value">{downloadInfo.price}</strong>
+                      <span className="detail-download__currency">{downloadInfo.currency}</span>
+                    </span>
+                    <a
+                      className="detail-download__cta"
+                      href={downloadInfo.ctaLink}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {downloadInfo.ctaLabel}
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -92,7 +115,7 @@ export default function DetailPage() {
                     id={section.id}
                     className="detail-article__section"
                   >
-                    <Title level={2}>{section.title}</Title>
+                    <Title level={2} fontSize={20}>{section.title}</Title>
                     {section.content.map((paragraph, index) => (
                       <Paragraph key={index}>{paragraph}</Paragraph>
                     ))}
@@ -123,55 +146,62 @@ export default function DetailPage() {
             </article>
 
             <aside className="detail-sidebar" aria-label="页面辅助信息">
-              <nav className="detail-toc" aria-label="文章目录">
-                <Title level={3}>文章目录</Title>
-                <ol>
-                  {detailSections.map((section) => (
-                    <li key={section.id}>
-                      <a href={`#${section.id}`}>{section.title}</a>
-                    </li>
-                  ))}
-                </ol>
-              </nav>
-
-              <section className="detail-download-card" role="group" aria-label="资源下载信息">
-                <span className="detail-download-card__title">资源下载</span>
-                <div className="detail-download-card__body">
-                  <div className="detail-download-card__price">
-                    <span className="detail-download-card__label">下载价格</span>
-                    <strong className="detail-download-card__value">
-                      {downloadInfo.price}
-                    </strong>
-                    <span className="detail-download-card__currency">
-                      {downloadInfo.currency}
-                    </span>
-                  </div>
-                  <a
-                    className="detail-download-card__cta"
-                    href={downloadInfo.ctaLink}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {downloadInfo.ctaLabel}
-                  </a>
-                </div>
-                <Paragraph type="secondary" className="detail-download-card__tip">
-                  {downloadInfo.tip}
-                </Paragraph>
+              <section className="detail-contact" aria-label="联系我们">
+                <Title level={3}>联系我们</Title>
+                <ul className="detail-contact__list">
+                  <li>
+                    <span className="detail-contact__label">咨询邮箱</span>
+                    <a href="mailto:support@kvxr.com">support@kvxr.com</a>
+                  </li>
+                  <li>
+                    <span className="detail-contact__label">商务微信</span>
+                    <span>kvxr-service</span>
+                  </li>
+                  <li>
+                    <span className="detail-contact__label">在线客服</span>
+                    <a href="https://www.kvxr.com/contact" target="_blank" rel="noreferrer">
+                      提交工单
+                    </a>
+                  </li>
+                </ul>
               </section>
 
-              <section className="detail-service-card" aria-label="服务保障">
-                <Title level={4} className="detail-service-card__title">
-                  服务保障
-                </Title>
-                <ul className="detail-service-list">
-                  {servicePerks.map((perk) => (
-                    <li key={perk}>
-                      <span className="detail-service-list__dot" aria-hidden="true" />
-                      <span>{perk}</span>
-                    </li>
-                  ))}
+              <section className="detail-info" aria-label="项目信息">
+                <Title level={3}>项目信息</Title>
+                <ul className="detail-info__list">
+                  <li>
+                    <span className="detail-info__label">开发语言</span>
+                    <span>HTML5 + JavaScript</span>
+                  </li>
+                  <li>
+                    <span className="detail-info__label">数据库</span>
+                    <span>MySQL 5.7+</span>
+                  </li>
+                  <li>
+                    <span className="detail-info__label">运行环境</span>
+                    <span>PHP 7.4+ / Apache</span>
+                  </li>
+                  <li>
+                    <span className="detail-info__label">更新时间</span>
+                    <span>2024-01-15</span>
+                  </li>
+                  <li>
+                    <span className="detail-info__label">文件大小</span>
+                    <span>45.2 MB</span>
+                  </li>
                 </ul>
+              </section>
+
+              <section className="detail-tags" aria-label="相关标签">
+                <Title level={3}>相关标签</Title>
+                <div className="detail-tags__list">
+                  <Tag color="blue">老虎机</Tag>
+                  <Tag color="green">H5游戏</Tag>
+                  <Tag color="orange">在线娱乐</Tag>
+                  <Tag color="purple">响应式</Tag>
+                  <Tag color="cyan">多语言</Tag>
+                  <Tag color="red">高收益</Tag>
+                </div>
               </section>
             </aside>
           </div>
