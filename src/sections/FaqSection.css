@@ -1,0 +1,46 @@
+.faq {
+  background: #fff;
+}
+
+.faq-collapse {
+  background: transparent;
+  border-radius: 20px;
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.08);
+}
+
+.faq-collapse .ant-collapse-item {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.faq-collapse .ant-collapse-item:last-child {
+  border-bottom: none;
+}
+
+.faq-collapse .ant-collapse-header {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2633;
+  padding: 20px 24px;
+}
+
+.faq-collapse .ant-collapse-content {
+  color: #4a5568;
+  padding: 0 24px 20px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .faq-collapse {
+    box-shadow: none;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+  }
+
+  .faq-collapse .ant-collapse-header {
+    padding: 16px 20px;
+  }
+
+  .faq-collapse .ant-collapse-content {
+    padding: 0 20px 16px;
+  }
+}

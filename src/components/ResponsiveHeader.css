@@ -1,0 +1,173 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 146, 111, 0.18);
+  transition: padding 0.3s ease-out;
+}
+
+.header-inner {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ff783f;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.desktop-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.desktop-menu .ant-menu {
+  background: transparent;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+}
+
+.desktop-menu .ant-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0 12px !important;
+}
+
+.desktop-menu .ant-menu-item::after {
+  display: none;
+}
+
+.desktop-menu a {
+  color: #1f2633;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.desktop-actions {
+  display: flex;
+  gap: 12px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-menu-button {
+  display: none;
+  font-size: 20px;
+}
+
+.mobile-drawer .header-menu {
+  border-inline-end: none;
+}
+
+/* 1240px以下添加左右边距 (1200px内容宽度 + 40px边距) */
+@media (max-width: 1240px) {
+  .header {
+    padding: 0 clamp(16px, 2vw, 20px);
+  }
+}
+
+/* 1150px断点 - 平滑过渡 */
+@media (max-width: 1150px) {
+  .header {
+    padding: 0 clamp(14px, 1.8vw, 18px);
+  }
+}
+
+/* 1100px断点 - 平滑过渡 */
+@media (max-width: 1100px) {
+  .header {
+    padding: 0 clamp(12px, 1.6vw, 16px);
+  }
+}
+
+/* 1024px断点 - 平滑过渡 */
+@media (max-width: 1024px) {
+  .header {
+    padding: 0 clamp(12px, 1.5vw, 16px);
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .header-inner {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .desktop-menu,
+  .desktop-actions {
+    display: none !important;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex !important;
+    color: #1f2633;
+  }
+}
+
+/* 大屏幕显示规则 (993px及以上) - 必须放在小屏幕规则之后 */
+@media (min-width: 993px) {
+  .desktop-menu,
+  .desktop-actions {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .mobile-menu-button {
+    display: none !important;
+  }
+}
+
+/* 平板横屏优化 (992px - 768px) */
+@media (max-width: 900px) {
+  .header {
+    padding: 0 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 12px;
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 360px) {
+  .header {
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 576px) {
+}

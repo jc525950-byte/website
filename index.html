@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ff926f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="SkySales" />
+    
+    <!-- 关键资源预加载 -->
+    <link rel="preload" href="/src/main.jsx" as="script" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://picsum.photos" />
+    <link rel="preconnect" href="https://www.kvxr.com" />
+    
+    <!-- DNS预解析 -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//picsum.photos" />
+    <link rel="dns-prefetch" href="//www.kvxr.com" />
+    
+    <!-- 字体优化加载 -->
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" 
+      rel="stylesheet" 
+      media="print" 
+      onload="this.media='all'" 
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
+    
+    <meta
+      name="description"
+      content="SkySales 软件销售解决方案，提供一站式客户管理、自动化营销与数据分析服务"
+    />
+    <meta
+      name="keywords"
+      content="SkySales, CRM, 销售软件, 客户管理, 自动化营销, 数据分析"
+    />
+    <meta name="author" content="SkySales" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://www.skysales.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content="SkySales — 智能销售增长平台" />
+    <meta
+      property="og:description"
+      content="SkySales 提供 CRM、自动化营销、AI 销售助手与数据分析，让企业快速构建增长闭环。"
+    />
+    <meta property="og:url" content="https://www.skysales.com/" />
+    <meta property="og:site_name" content="SkySales" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SkySales — 智能销售增长平台" />
+    <meta
+      name="twitter:description"
+      content="通过 SkySales 打造以客户为中心的销售与客户成功解决方案。"
+    />
+    <title>SkySales — 智能销售增长平台</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SkySales",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "299",
+          "priceCurrency": "CNY"
+        },
+        "description": "SkySales 是一体化的销售和客户成功平台，提供 CRM、自动化营销、AI 销售助手与数据分析功能。",
+        "url": "https://www.skysales.com/"
+      }
+    </script>
+    
+    <!-- 内联关键CSS（可选，用于首屏渲染优化） -->
+    <style>
+      /* 关键路径CSS - 首屏渲染优化 */
+      body {
+        margin: 0;
+        font-family: 'Inter', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #ffffff;
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      /* 加载状态样式 */
+      .loading-fallback {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+        font-size: 16px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- 首屏加载回退内容 -->
+      <div class="loading-fallback">
+        <div>页面加载中...</div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

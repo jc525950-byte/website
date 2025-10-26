@@ -1,0 +1,42 @@
+.section-header {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-header--start {
+  text-align: left;
+  align-items: flex-start;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.section-header--center {
+  align-items: center;
+}
+
+.section-header__eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 146, 111, 0.9);
+}
+
+.section-header .ant-typography {
+  color: #1f2633;
+}
+
+.section-header .ant-typography + .ant-typography {
+  color: #4a5568;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 32px;
+  }
+}

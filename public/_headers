@@ -1,0 +1,60 @@
+# 缓存策略配置文件（适用于 Netlify 等平台）
+
+# 静态资源缓存（1年）
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScript 和 CSS 文件缓存（1年）
+*.js
+  Cache-Control: public, max-age=31536000, immutable
+*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# 图片资源缓存（30天）
+*.jpg
+  Cache-Control: public, max-age=2592000
+*.jpeg
+  Cache-Control: public, max-age=2592000
+*.png
+  Cache-Control: public, max-age=2592000
+*.webp
+  Cache-Control: public, max-age=2592000
+*.svg
+  Cache-Control: public, max-age=2592000
+*.ico
+  Cache-Control: public, max-age=2592000
+
+# 字体文件缓存（1年）
+*.woff
+  Cache-Control: public, max-age=31536000, immutable
+*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+*.eot
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML 文件缓存（1小时，允许重新验证）
+*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Service Worker 文件（不缓存）
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Manifest 文件缓存（1天）
+/manifest.json
+  Cache-Control: public, max-age=86400
+
+# API 响应缓存（5分钟）
+/api/*
+  Cache-Control: public, max-age=300, must-revalidate
+
+# 安全头部
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https:;
